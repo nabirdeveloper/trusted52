@@ -3,15 +3,5 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "regions": ["iad1"],
-  "env": {
-    "NEXTAUTH_URL": {
-      "description": "The canonical URL of your production site"
-    }
-  },
-    "build": {
-      "env": {
-        "NEXTAUTH_URL": "https://trusted.vercel.app"
-      }
-    },
   "crons": []
 }

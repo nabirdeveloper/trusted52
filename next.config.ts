@@ -2,12 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // Explicitly set NEXTAUTH_URL for Vercel deployment
-  ...(process.env.NEXTAUTH_URL ? {
-    env: {
-      NEXTAUTH_URL: String(process.env.NEXTAUTH_URL)
-    }
-  } : {}),
   images: {
     remotePatterns: [
       {
