@@ -5,13 +5,15 @@
   "regions": ["iad1"],
   "env": {
     "NEXTAUTH_URL": {
-      "description": "The canonical URL of your production site"
+      "description": "The canonical URL of your production site",
+      "value": "https://trusted.vercel.app"
     }
   },
-  "build": {
-    "env": {
-      "NEXTAUTH_URL": "@site-url"
-    }
-  },
+    "build": {
+      "env": {
+        "NEXTAUTH_URL": "https://trusted.vercel.app",
+        "NEXTAUTH_SECRET": "z2hTQWDkApCHz3gvtbDe2mniy/6RYYuI0ekmcciC4F4="
+      }
+    },
   "crons": []
 }
