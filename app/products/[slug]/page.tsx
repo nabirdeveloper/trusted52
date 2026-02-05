@@ -100,6 +100,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       .then(doc => doc ? JSON.parse(JSON.stringify(doc)) : null)
 
     if (!product) {
+      console.error('Product not found for slug:', slug)
       notFound()
     }
 
