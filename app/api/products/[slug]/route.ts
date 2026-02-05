@@ -24,7 +24,7 @@ export async function GET(
     // Find the product by slug and populate related data
     const product = await Product.findOne({ 
       slug, 
-      isActive: true 
+      status: 'active' 
     })
       .populate('categories', 'name slug image')
       .lean()
@@ -40,7 +40,7 @@ export async function GET(
     const relatedProducts = await Product.find({
       _id: { $ne: product._id },
       categories: { $in: product.categories },
-      isActive: true
+      status: 'active'
     })
     .populate('categories', 'name slug')
     .limit(8)
